@@ -1,0 +1,68 @@
+site_name: LET PMOドキュメント
+
+theme:
+    palette:
+        primary: black
+        accent: deep orange
+    name: material                  # 使用するテーマを指定
+    language: ja                    # 使用言語を設定
+    icon:                           # サイト左上のlogoマークを指定
+        logo: material/book-open-blank-variant
+        repo: fontawesome/brands/github
+    # favicon: favicon.png          # favion(ブラウザタブに表示される画像)を設定
+    features:                       # タブ表示を有効.
+        - navigation.tabs
+        - navigation.instant
+        # - toc.integrate
+    font:
+        text: "Noto Sans JP"
+        code: "Noto Sans JP"
+        #text: "Segoe UI"
+        #code: "Segoe UI"
+
+repo_url: https://github.com/MoeFurukawa/test.github.io
+repo_name: test.github.io
+edit_uri: blob/main/docs/
+
+markdown_extensions:
+    - footnotes                     # 注釈を入れる拡張
+    - admonition                    # 警告を入れる拡張
+    - pymdownx.highlight:
+        linenums: true              # コードブロックに行番号を表示
+    - pymdownx.tasklist:
+        custom_checkbox: true       # タスクリストを見やすくする
+    - pymdownx.snippets             # 別のmdファイルを読み込めるようにする
+    - abbr                          # 略語の説明を入れられる
+    - pymdownx.superfences:          # 注釈内でコードブロックを使用できるようにする
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+    - plantuml_markdown:
+        server: http://www.plantuml.com/plantuml
+        format: svg
+    - def_list
+    - pymdownx.keys
+    # - pymdownx.emoji:             # 絵文字やアイコンを使えるようにする(GitHub上で表示されないので使わない)
+    #     emoji_index: !!python/name:materialx.emoji.twemoji
+    #     emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.css
+  - css/custom.css
+  - https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+  # - https://use.fontawesome.com/releases/v5.14.0/css/all.css
+  - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
+  - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
+
+plugins:
+  - search:
+      lang:
+        - ja
+        - en
+  - git-revision-date-localized
+  - awesome-pages
+
