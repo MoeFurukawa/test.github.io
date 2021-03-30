@@ -1,8 +1,8 @@
-site_name: LET PMOドキュメント
+site_name: furukawa's GithubPages
 
 theme:
     palette:
-        primary: black
+        primary: gray
         accent: deep orange
     name: material                  # 使用するテーマを指定
     language: ja                    # 使用言語を設定
