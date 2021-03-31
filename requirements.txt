@@ -1,0 +1,5 @@
+mkdocs==1.1.2
+mkdocs-material==6.2.8
+mkdocs-awesome-pages-plugin==2.5.0
+mkdocs-git-revision-date-localized-plugin==0.8
+plantuml-markdown==3.4.2
